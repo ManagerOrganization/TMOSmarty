@@ -39,13 +39,19 @@
 }
 
 - (void)loadImageWithURLString:(NSString *)urlString {
-    #warning You have to load image by yourself
+    NSURL *URL = [NSURL URLWithString:urlString];
+    NSURLRequest *request = [NSURLRequest requestWithURL:URL];
+    [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
+        if (connectionError == nil && data.length > 0) {
+            UIImage *image = [UIImage imageWithData:data];
+            [self setImage:image];
+        }
+    }];
 }
 
 - (void)loadImageWithURLString:(NSString *)urlString
                     callBefore:(void(^)(UIImageView *imageView))argCallBefore
                      callAfter:(void(^)(UIImageView *imageView, UIImage *image))argCallAfter {
-    #warning You have to load image by yourself
 }
 
 @end

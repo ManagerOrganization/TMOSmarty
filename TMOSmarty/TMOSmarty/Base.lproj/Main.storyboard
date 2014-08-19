@@ -164,7 +164,7 @@
                                 <rect key="frame" x="17" y="322" width="280" height="226"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <mutableString key="text">This demo use the same data and same view. We use smartyBind to decleare all views should response model items change. After 10 seconds, model values change, view will change automatically.  ---  这是一个完全一致的demo，我们使用smartyBind声明所有的view都绑定到model。10秒后，model的值将会变化，View也将会自动更新。</mutableString>
+                                <string key="text">This demo use the same data and same view. We use smartyBind to decleare all views should response model items change. After 10 seconds, model values change, view will change automatically.  ---  这是一个完全一致的demo，我们使用smartyBind声明所有的view都绑定到model。10秒后，model的值将会变化，View也将会自动更新。</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -510,11 +510,52 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Function Usage" id="TRs-LX-17B"/>
+                    <navigationItem key="navigationItem" title="Function Usage" id="TRs-LX-17B">
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="PoN-jJ-XvP">
+                            <connections>
+                                <segue destination="CIY-Gy-AXg" kind="push" id="2KD-lX-QQa"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RCz-6I-8Ns" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2243" y="106"/>
+        </scene>
+        <!--Demo Remote Image View Controller - ImageView Remote Load-->
+        <scene sceneID="lvX-Qu-A2K">
+            <objects>
+                <viewController id="CIY-Gy-AXg" customClass="DemoRemoteImageViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="avz-lE-0Nq"/>
+                        <viewControllerLayoutGuide type="bottom" id="N3f-Vj-f9K"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dsV-6L-B5w">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="req-Si-EhB">
+                                <rect key="frame" x="20" y="95" width="280" height="126"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="&lt;{image}>">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="This demo shows how to use smarty controls imageView load image from remote server!  ---  这个例子示例了如何使用smarty对imageView动态加载服务器图片。" translatesAutoresizingMaskIntoConstraints="NO" id="xKB-69-cVk">
+                                <rect key="frame" x="20" y="322" width="280" height="226"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="ImageView Remote Load" id="iYy-cp-5UB"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0eb-hb-Unv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2720" y="106"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
