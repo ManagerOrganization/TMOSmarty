@@ -128,7 +128,7 @@
     else if ([self isKindOfClass:[UIImageView class]]) {
         if ([Smarty isSmarty:TOString(self.accessibilityLabel)]) {
             [self setAdditionValue:self.accessibilityLabel forKey:@"smartyImageKey"];
-            [Smarty addSmartyBindBySmartyCode:[(UIImageView *)self accessibilityIdentifier] withView:self withDataSource:argDataSource];
+            [Smarty addSmartyBindBySmartyCode:[(UIImageView *)self accessibilityLabel] withView:self withDataSource:argDataSource];
         }
     }
     
